@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]>      <html class="no-js"> <!--<![endif]-->
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Pappa's First Chart</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="">
+    </head>
+    <body>
+        <!--[if lt IE 7]>
+            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+
+<!--First, we need to have a canvas in our page. It's recommended to give the chart its own container for responsiveness.-->
+          <div>
+            <canvas id="myChart"></canvas>
+          </div>
+
+<!--Next, we need to include Chart.js.-->
+          <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+   
+          
+<!--Finally, we need to create a script that will add the chart to our page.-->          
+          <script>
+            const ctx = document.getElementById('myChart');
+          
+            new Chart
+                (ctx, 
+                    {
+                        type: 'bar',
+                        data: 
+                            {
+                                labels: ['Schnarz', 'Flerggle', 'Yellow', 'Green', 'Purple', 'Orange'],
+                                datasets: 
+                                    [
+                                        {
+                                            label: '# of Votes',
+                                            data: [12, 19, 3, 5, 2, 3],
+                                            borderWidth: 1
+                                        }
+                                    ]
+                            },
+                        options: 
+                            {
+                                scales: 
+                                    {
+                                        y: 
+                                            {
+                                                beginAtZero: true
+                                            }
+                                    }
+                            }
+                    }
+                );
+          </script>
+
+        <div>
+            <canvas id="myChart"></canvas>
+          </div>
+          
+          <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+          
+          <script>
+            const ctx = document.getElementById('myChart');
+          
+            new Chart(ctx, {
+              type: 'bar',
+              data: {
+                labels: ['Red', 'Blue', 'Yellow', 'Green', 'Purple', 'Orange'],
+                datasets: [{
+                  label: '# of Votes',
+                  data: [12, 19, 3, 5, 2, 3],
+                  borderWidth: 1
+                }]
+              },
+              options: {
+                scales: {
+                  y: {
+                    beginAtZero: true
+                  }
+                }
+              }
+            });
+          </script>
+          
+        
+        <script src="" async defer></script>
+    </body>
+</html>
+
